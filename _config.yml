@@ -3,17 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: First page
-subtitle:
-description:
+title: Slimer page
+subtitle: 
+description: A human in the way of death.
 author: Slimer
-language:
+email: u8u7u87@gmail.com
+language: 
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: u8u7u87.github.io 
-root: /
+root: /test
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -26,6 +27,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+# zh-CN or zh-TW or en
+language: zh-Hans
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
@@ -48,6 +51,28 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+# Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
+duoshuo_shortname: slimer
+# Extensions
+Plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+#sitemap
+sitemap:
+  path: sitemap.xml
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -63,11 +88,12 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: landscape
-
+## theme: landscape
+## theme: pisces
+theme: next
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: github
-  repository: git@github.com:u8u7u87/test.git
+  type: git
+  repository: https://github.com/u8u7u87/test.git
   branch: gh-pages

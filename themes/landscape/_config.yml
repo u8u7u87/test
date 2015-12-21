@@ -2,8 +2,9 @@
 menu:
   Home: /
   Archives: /archives
+  About: /about
 rss: /atom.xml
-
+Sitemap: /sitemap.xml
 # Content
 excerpt_link: Read More
 fancybox: true
@@ -16,6 +17,7 @@ widgets:
 - tagcloud
 - archive
 - recent_posts
+- friends
 
 # Miscellaneous
 google_analytics:
